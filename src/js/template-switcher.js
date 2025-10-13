@@ -60,13 +60,27 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function updatePageTitle(templateName) {
         const titles = {
-            'glint': 'Hobiautode Hoiustamine - Glint Design',
-            'carries': 'Hobiautode Hoiustamine - Carries Design', 
-            'landed': 'Hobiautode Hoiustamine - Landed Design'
+            'glint': 'Hobiautode Hoiustamine - Forty Design (Modern)',
+            'carries': 'Hobiautode Hoiustamine - Carries Design (Business)', 
+            'landed': 'Hobiautode Hoiustamine - Landed Design (Premium)'
         };
         
         document.title = titles[templateName] || 'Hobiautode Hoiustamine';
     }
+    
+    // Add click analytics for template buttons
+    templateButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            console.log('Template selected:', this.dataset.template);
+            
+            // Optional: Add Google Analytics or other tracking here
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'template_switch', {
+                    'template_name': this.dataset.template
+                });
+            }
+        });
+    });
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
