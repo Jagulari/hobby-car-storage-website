@@ -6,68 +6,244 @@
     <title>Hobiautode Hoiustamine</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive-new.css">
+    <link rel="stylesheet" href="css/template-switcher.css">
+    <link rel="stylesheet" href="css/template-styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>🚗 Hobiautode Hoiustamine</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">🏠 Avaleht</a></li>
-                    <li><a href="pages/services.html">⚙️ Teenused</a></li>
-                    <li><a href="pages/pricing.html">💰 Hinnad</a></li>
-                    <li><a href="pages/about.html">ℹ️ Meist</a></li>
-                    <li><a href="pages/contact.html">📞 Kontakt</a></li>
-                </ul>
-            </nav>
+    <!-- Template Switcher -->
+    <div class="template-switcher">
+        <div class="switcher-container">
+            <span class="switcher-label">🎨 Valige disain:</span>
+            <div class="template-buttons">
+                <button class="template-btn active" data-template="glint">
+                    ✨ Glint (Modern)
+                </button>
+                <button class="template-btn" data-template="carries">
+                    🚛 Carries (Transport)
+                </button>
+                <button class="template-btn" data-template="landed">
+                    💼 Landed (Business)
+                </button>
+            </div>
         </div>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <h2>Tere tulemast meie hobiautode hoiustamise teenusesse!</h2>
-            <p>Pakkume sooja, kuiva ja turvalist parkimiskohta teie erilistele autodele, millega sõidate vaid harva. Teie unistuste auto väärib parimat hoolt!</p>
-            <a href="pages/contact.html" class="button">Küsi hinnapakkumist</a>
-        </section>
+    </div>
+    <!-- Glint Template View -->
+    <div id="glint-view" class="template-view active">
+        <header>
+            <div class="header-content">
+                <h1>🚗 Hobiautode Hoiustamine</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#avaleht">🏠 Avaleht</a></li>
+                        <li><a href="#teenused">⚙️ Teenused</a></li>
+                        <li><a href="#hinnad">💰 Hinnad</a></li>
+                        <li><a href="#meist">ℹ️ Meist</a></li>
+                        <li><a href="#kontakt">📞 Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         
-        <section>
-            <h3>Miks valida meid?</h3>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">🔒</div>
-                    <h4>Turvaline hoiustamine</h4>
-                    <p>24/7 valve, kaamerad ja täielik kindlustuskaitse teie väärtuslikele autodele</p>
+        <main>
+            <section id="avaleht" class="hero">
+                <h2>Tere tulemast meie hobiautode hoiustamise teenusesse!</h2>
+                <p>Pakkume sooja, kuiva ja turvalist parkimiskohta teie erilistele autodele, millega sõidate vaid harva. Teie unistuste auto väärib parimat hoolt!</p>
+                <a href="#kontakt" class="button">Küsi hinnapakkumist</a>
+            </section>
+            
+            <section id="teenused">
+                <h3>Miks valida meid?</h3>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">🔒</div>
+                        <h4>Turvaline hoiustamine</h4>
+                        <p>24/7 valve, kaamerad ja täielik kindlustuskaitse teie väärtuslikele autodele</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🌡️</div>
+                        <h4>Optimaalsed tingimused</h4>
+                        <p>Kontrollitud temperatuur ja niiskus, et auto säiliks ideaalses seisukorras</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">⭐</div>
+                        <h4>Professionaalne teenindus</h4>
+                        <p>Kogenud meeskond, kes mõistab hobiautode erilisi vajadusi</p>
+                    </div>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🌡️</div>
-                    <h4>Optimaalsed tingimused</h4>
-                    <p>Kontrollitud temperatuur ja niiskus, et auto säiliks ideaalses seisukorras</p>
+            </section>
+            
+            <section id="hinnad">
+                <h3>Meie teenused</h3>
+                <ul>
+                    <li>Pikaajaline hoiustamine (alates 1 kuust)</li>
+                    <li>Lühiajaline hoiustamine (nädalad, päevad)</li>
+                    <li>Auto ettevalmistus hoiustamiseks</li>
+                    <li>Regulaarsed kontrollid ja hooldus</li>
+                    <li>Auto pesemine ja detailing</li>
+                    <li>Aku hoidmine ja laadimine</li>
+                </ul>
+                <a href="#kontakt" class="button">Vaata kõiki teenuseid</a>
+            </section>
+        </main>
+    </div>
+
+    <!-- Carries Template View -->
+    <div id="carries-view" class="template-view">
+        <header class="carries-header">
+            <div class="carries-container">
+                <div class="carries-logo">
+                    <h1>🚚 Hobiautode Hoiustamine</h1>
+                    <span class="carries-tagline">Professionaalne transpordi- ja hoiustusteenus</span>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">⭐</div>
-                    <h4>Professionaalne teenindus</h4>
-                    <p>Kogenud meeskond, kes mõistab hobiautode erilisi vajadusi</p>
+                <nav class="carries-nav">
+                    <a href="#avaleht">Avaleht</a>
+                    <a href="#teenused">Teenused</a>
+                    <a href="#hinnad">Hinnad</a>
+                    <a href="#meist">Meist</a>
+                    <a href="#kontakt">Kontakt</a>
+                </nav>
+            </div>
+        </header>
+        
+        <section class="carries-hero">
+            <div class="carries-hero-content">
+                <h2>Turvaline ja Professionaalne Hobiautode Hoiustamine</h2>
+                <p>Üle 15 aasta kogemust väärtuslike sõidukite hoiustamises. Meie teenus tagab teie hobiautole parima võimaliku hoolduse ja turvalisuse.</p>
+                <div class="carries-cta">
+                    <a href="#kontakt" class="carries-btn-primary">Küsi Hinnapakkumist</a>
+                    <a href="#teenused" class="carries-btn-secondary">Vaata Teenuseid</a>
                 </div>
+            </div>
+            <div class="carries-hero-image">
+                <div class="carries-placeholder">🏢 Meie Hoiustuskeskus</div>
             </div>
         </section>
         
-        <section>
-            <h3>Meie teenused</h3>
-            <ul>
-                <li>Pikaajaline hoiustamine (alates 1 kuust)</li>
-                <li>Lühiajaline hoiustamine (nädalad, päevad)</li>
-                <li>Auto ettevalmistus hoiustamiseks</li>
-                <li>Regulaarsed kontrollid ja hooldus</li>
-                <li>Auto pesemine ja detailing</li>
-                <li>Aku hoidmine ja laadimine</li>
-            </ul>
-            <a href="pages/services.html" class="button">Vaata kõiki teenuseid</a>
+        <section class="carries-services" id="teenused">
+            <div class="carries-container">
+                <h3>Meie Teenused</h3>
+                <div class="carries-service-grid">
+                    <div class="carries-service-card">
+                        <div class="carries-service-icon">🔐</div>
+                        <h4>Turvaline Hoiustamine</h4>
+                        <p>Täielik valve ja turvalisus 24/7. Video monitooring ja häiresüsteemid.</p>
+                    </div>
+                    <div class="carries-service-card">
+                        <div class="carries-service-icon">🌡️</div>
+                        <h4>Klimaatiline Kontroll</h4>
+                        <p>Optimaalne temperatuur ja niiskus auto säilitamiseks ideaalses seisukorras.</p>
+                    </div>
+                    <div class="carries-service-card">
+                        <div class="carries-service-icon">🔧</div>
+                        <h4>Hooldus ja Kontroll</h4>
+                        <p>Regulaarsed kontrollid, aku hoidmine ja vajadusel hooldus.</p>
+                    </div>
+                    <div class="carries-service-card">
+                        <div class="carries-service-icon">🚗</div>
+                        <h4>Detailing Teenus</h4>
+                        <p>Auto pesemine, detailing ja konserveerimine pikemaks hoiustamiseks.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-    </main>
+    </div>
+
+    <!-- Landed Template View -->
+    <div id="landed-view" class="template-view">
+        <header class="landed-header">
+            <nav class="landed-nav">
+                <div class="landed-logo">
+                    <h1>Hobiautode Hoiustamine</h1>
+                </div>
+                <ul class="landed-menu">
+                    <li><a href="#avaleht">Avaleht</a></li>
+                    <li><a href="#teenused">Teenused</a></li>
+                    <li><a href="#hinnad">Hinnad</a></li>
+                    <li><a href="#meist">Meist</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="landed-banner" id="avaleht">
+            <div class="landed-content">
+                <h2>Premium Hobiautode Hoiustamine</h2>
+                <p>Tagame teie väärtuslikele autodele parima võimaliku hoolduse ja turvalisuse. Professionaalne teenindus alates 1999. aastast.</p>
+                <ul class="landed-features">
+                    <li>✓ 24/7 Turvasüsteem</li>
+                    <li>✓ Klimaatiline Kontroll</li>
+                    <li>✓ Professionaalne Meeskond</li>
+                    <li>✓ Täielik Kindlustuskaitse</li>
+                </ul>
+                <a href="#kontakt" class="landed-button">Alusta Koostööd</a>
+            </div>
+            <div class="landed-image">
+                <div class="landed-placeholder">🏆 Premium Hoiustus</div>
+            </div>
+        </section>
+        
+        <section class="landed-about" id="teenused">
+            <div class="landed-container">
+                <div class="landed-about-content">
+                    <h3>Miks Valida Meid?</h3>
+                    <p>Oleme spetsialiseerunud hobiautode ja kollektsionääride sõidukite hoiustamisele. Meie kogemus ja professionaalsus tagavad, et teie auto on meie juures parimates kätes.</p>
+                    
+                    <div class="landed-stats">
+                        <div class="landed-stat">
+                            <span class="landed-stat-number">500+</span>
+                            <span class="landed-stat-label">Rahulolev Klient</span>
+                        </div>
+                        <div class="landed-stat">
+                            <span class="landed-stat-number">25+</span>
+                            <span class="landed-stat-label">Aastat Kogemust</span>
+                        </div>
+                        <div class="landed-stat">
+                            <span class="landed-stat-number">100%</span>
+                            <span class="landed-stat-label">Turvalisus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Common Contact Section for all templates -->
+    <section id="kontakt" class="contact-section">
+        <div class="contact-container">
+            <h3>Võtke Meiega Ühendust</h3>
+            <p>Küsige hinnapakkumist või lisainfot meie teenuste kohta</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <h4>Telefon</h4>
+                        <p>+372 123 4567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <h4>E-post</h4>
+                        <p>info@hobiautodehoiustamine.ee</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <h4>Asukoht</h4>
+                        <p>Tallinn, Eesti</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2023 Hobiautode Hoiustamine. Kõik õigused kaitstud.</p>
+        <p>&copy; 2025 Hobiautode Hoiustamine. Kõik õigused kaitstud.</p>
     </footer>
+    
     <script src="js/main.js"></script>
     <script src="js/contact-form.js"></script>
+    <script src="js/template-switcher.js"></script>
 </body>
 </html>
