@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobiautode Hoiustamine - Transport Design</title>
+    <style>
+        /* Carries Business Style */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .carries-header {
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.3);
+        }
+        
+        .carries-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .carries-logo h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        
+        .carries-tagline {
+            color: #bbdefb;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 0.2rem;
+        }
+        
+        .carries-nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .carries-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .carries-nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .carries-hero {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8f5e8 100%);
+            padding: 4rem 0;
+            display: flex;
+            align-items: center;
+            min-height: 500px;
+        }
+        
+        .carries-hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .carries-hero-content h2 {
+            color: #1a237e;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .carries-hero-content p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        
+        .carries-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .carries-btn-primary {
+            background: linear-gradient(135deg, #1976d2, #1565c0);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+        }
+        
+        .carries-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(25, 118, 210, 0.4);
+        }
+        
+        .carries-btn-secondary {
+            background: transparent;
+            color: #1976d2;
+            padding: 1rem 2rem;
+            border: 2px solid #1976d2;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .carries-btn-secondary:hover {
+            background: #1976d2;
+            color: white;
+        }
+        
+        .carries-hero-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carries-placeholder {
+            background: linear-gradient(135deg, #64b5f6, #42a5f5);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.3);
+        }
+        
+        .carries-services {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .carries-services h3 {
+            text-align: center;
+            color: #1a237e;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .carries-service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 2rem;
+        }
+        
+        .carries-service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #e3f2fd;
+        }
+        
+        .carries-service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .carries-service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .carries-service-card h4 {
+            color: #1a237e;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .carries-service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .carries-contact {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .carries-contact h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .carries-hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .carries-hero-content h2 {
+                font-size: 2rem;
+            }
+            .carries-nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="carries-header">
+        <div class="carries-container">
+            <div class="carries-logo">
+                <h1>🚚 Hobiautode Hoiustamine</h1>
+                <span class="carries-tagline">Professionaalne transpordi- ja hoiustusteenus</span>
+            </div>
+            <nav class="carries-nav">
+                <a href="#hero">Avaleht</a>
+                <a href="#teenused">Teenused</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="carries-hero" id="hero">
+        <div class="carries-hero-content">
+            <div>
+                <h2>Turvaline ja Professionaalne Hobiautode Hoiustamine</h2>
+                <p>Üle 15 aasta kogemust väärtuslike sõidukite hoiustamises. Meie teenus tagab teie hobiautole parima võimaliku hoolduse ja turvalisuse.</p>
+                <div class="carries-cta">
+                    <a href="#kontakt" class="carries-btn-primary">Küsi Hinnapakkumist</a>
+                    <a href="#teenused" class="carries-btn-secondary">Vaata Teenuseid</a>
+                </div>
+            </div>
+            <div class="carries-hero-image">
+                <div class="carries-placeholder">🏢 Meie Hoiustuskeskus</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="carries-services" id="teenused">
+        <div class="carries-container">
+            <h3>Meie Teenused</h3>
+            <div class="carries-service-grid">
+                <div class="carries-service-card">
+                    <div class="carries-service-icon">🔐</div>
+                    <h4>Turvaline Hoiustamine</h4>
+                    <p>Täielik valve ja turvalisus 24/7. Video monitooring ja häiresüsteemid.</p>
+                </div>
+                <div class="carries-service-card">
+                    <div class="carries-service-icon">🌡️</div>
+                    <h4>Klimaatiline Kontroll</h4>
+                    <p>Optimaalne temperatuur ja niiskus auto säilitamiseks ideaalses seisukorras.</p>
+                </div>
+                <div class="carries-service-card">
+                    <div class="carries-service-icon">🔧</div>
+                    <h4>Hooldus ja Kontroll</h4>
+                    <p>Regulaarsed kontrollid, aku hoidmine ja vajadusel hooldus.</p>
+                </div>
+                <div class="carries-service-card">
+                    <div class="carries-service-icon">🚗</div>
+                    <h4>Detailing Teenus</h4>
+                    <p>Auto pesemine, detailing ja konserveerimine pikemaks hoiustamiseks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="carries-contact" id="kontakt">
+        <h3>Võtke Meiega Ühendust</h3>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <h4>Telefon</h4>
+                <p>+372 123 4567</p>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <h4>E-post</h4>
+                <p>info@hobiautodehoiustamine.ee</p>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <h4>Asukoht</h4>
+                <p>Tallinn, Eesti</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
