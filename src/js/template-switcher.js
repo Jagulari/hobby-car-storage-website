@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const templateButtons = document.querySelectorAll('.template-btn');
     const templateViews = document.querySelectorAll('.template-view');
     
-    // Set default active template (Glint)
-    const defaultTemplate = 'glint';
+    // Set default active template (Forty)
+    const defaultTemplate = 'forty';
     showTemplate(defaultTemplate);
     setActiveButton(defaultTemplate);
     
@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function updatePageTitle(templateName) {
         const titles = {
-            'glint': 'Hobiautode Hoiustamine - Forty Design (Modern)',
-            'carries': 'Hobiautode Hoiustamine - Carries Design (Business)', 
+            'forty': 'Hobiautode Hoiustamine - Forty Design (Modern)',
+            'solid-state': 'Hobiautode Hoiustamine - Solid State Design (Tech)', 
             'landed': 'Hobiautode Hoiustamine - Landed Design (Premium)'
         };
         
