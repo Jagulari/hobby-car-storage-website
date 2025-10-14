@@ -1,79 +1,119 @@
-<!DOCTYPE html>
-<html lang="et">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hobiautode Hoiustamine</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive-new.css">
-    <link rel="stylesheet" href="css/template-switcher.css">
-    <link rel="stylesheet" href="css/template-styles.css">
-</head>
-<body>
-    <!-- Template Switcher -->
-    <div class="template-switcher">
-        <div class="switcher-container">
-            <span class="switcher-label">🎨 Valige disain:</span>
-            <div class="template-buttons">
-                <button class="template-btn active" data-template="forty">
-                    ✨ Forty (Modern)
-                </button>
-                <button class="template-btn" data-template="solid-state">
-                    ⚡ Solid State (Tech)
-                </button>
-                <button class="template-btn" data-template="landed">
-                    💼 Landed (Premium)
-                </button>
-            </div>
-        </div>
-    </div>
-    <!-- Forty Template View -->
-    <div id="forty-view" class="template-view active">
-        <div class="template-redirect">
-            <div class="redirect-card">
-                <h2>✨ Forty Template (Modern Design)</h2>
-                <p>Modern ja kaasaegne disain koos galerii vaatega ja animatsioonidega.</p>
-                <div class="template-preview">
-                    <img src="templates/forty/images/banner.jpg" alt="Forty template preview" style="width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
-                </div>
-                <div class="template-actions">
-                    <a href="templates/forty-hobby.html" class="button primary" target="_blank">
-                        🚀 Ava Template Uues Aknas
-                    </a>
-                    <a href="templates/forty-hobby.html" class="button secondary">
-                        📱 Ava Samas Aknas
-                    </a>
-                </div>
-                <p class="template-features">
-                    <strong>Omadused:</strong> Galerii vaade • Smooth scrolling • FontAwesome ikoonid • Mobile responsive
-                </p>
-            </div>
-        </div>
-    </div>
+<!DOCTYPE html><!DOCTYPE html>
 
-    <!-- Solid State Template View -->
-    <div id="solid-state-view" class="template-view">
-        <div class="template-redirect">
-            <div class="redirect-card">
-                <h2>⚡ Solid State Template (Tech Design)</h2>
-                <p>Futuristlik ja tehnoloogiline disain koos smooth animatsioonidega.</p>
-                <div class="template-preview">
-                    <img src="templates/solid-state/images/bg.jpg" alt="Solid State template preview" style="width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
-                </div>
-                <div class="template-actions">
-                    <a href="templates/solid-state-hobby.html" class="button primary" target="_blank">
-                        🚀 Ava Template Uues Aknas
-                    </a>
-                    <a href="templates/solid-state-hobby.html" class="button secondary">
-                        📱 Ava Samas Aknas
-                    </a>
-                </div>
-                <p class="template-features">
-                    <strong>Omadused:</strong> Smooth scrolling • Spotlight sections • Modern animations • Tech theme
-                </p>
-            </div>
-        </div>
-    </div>
+<html lang="et"><html lang="et">
+
+<head><head>
+
+    <meta charset="UTF-8">    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hobiautode Hoiustamine</title>    <title>Hobiautode Hoiustamine</title>
+
+    <style>    <style>
+
+        * {        * {
+
+            margin: 0;            margin: 0;
+
+            padding: 0;            padding: 0;
+
+            box-sizing: border-box;            box-sizing: border-box;
+
+        }        }
+
+                
+
+        body {        body {
+
+            background: #000;            background: #000;
+
+            color: #fff;            color: #fff;
+
+            font-family: Arial, sans-serif;            font-family: Arial, sans-serif;
+
+            height: 100vh;            height: 100vh;
+
+            display: flex;            display: flex;
+
+            flex-direction: column;            flex-direction: column;
+
+            justify-content: center;            justify-content: center;
+
+            align-items: center;            align-items: center;
+
+        }        }
+
+                
+
+        .version-selector {        .version-selector {
+
+            text-align: center;            text-align: center;
+
+        }        }
+
+                
+
+        .version-link {        .version-link {
+
+            display: block;            display: block;
+
+            color: #fff;            color: #fff;
+
+            text-decoration: none;            text-decoration: none;
+
+            font-size: 2rem;            font-size: 2rem;
+
+            margin: 2rem 0;            margin: 2rem 0;
+
+            padding: 1rem 2rem;            padding: 1rem 2rem;
+
+            transition: color 0.3s ease;            transition: color 0.3s ease;
+
+        }        }
+
+                
+
+        .version-link:hover {        .version-link:hover {
+
+            color: #ccc;            color: #ccc;
+
+        }        }
+
+                
+
+        @media (max-width: 768px) {        @media (max-width: 768px) {
+
+            .version-link {            .version-link {
+
+                font-size: 1.5rem;                font-size: 1.5rem;
+
+                margin: 1.5rem 0;                margin: 1.5rem 0;
+
+            }            }
+
+        }        }
+
+    </style>    </style>
+
+</head></head>
+
+<body><body>
+
+    <div class="version-selector">    <div class="version-selector">
+
+        <a href="templates/forty-hobby.html" class="version-link">versioon 1</a>        <a href="templates/forty-hobby.html" class="version-link">versioon 1</a>
+
+        <a href="templates/solid-state-hobby.html" class="version-link">versioon 2</a>        <a href="templates/solid-state-hobby.html" class="version-link">versioon 2</a>
+
+        <a href="templates/landed-hobby.html" class="version-link">versioon 3</a>        <a href="templates/landed-hobby.html" class="version-link">versioon 3</a>
+
+    </div>    </div>
+
+</body></body>
+
+</html></html>
+        
 
     <!-- Landed Template View -->
     <div id="landed-view" class="template-view">
